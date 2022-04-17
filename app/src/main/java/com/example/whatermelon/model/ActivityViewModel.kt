@@ -1,6 +1,5 @@
 package com.example.whatermelon.model
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -23,12 +22,7 @@ class ActivityViewModel constructor(private val mainRepository: MainRepository) 
         reset()
     }
 
-    fun setActivity(activity: Activity) {
-        _activity.value = activity
-    }
-
     fun getRandomActivity() {
-        Log.d("testaja", "Panggil");
         job = CoroutineScope(Dispatchers.IO + exceptionHandler).launch {
             val response = mainRepository.getRandomActivity()
             withContext(Dispatchers.Main) {

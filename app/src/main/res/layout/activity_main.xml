@@ -37,7 +37,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="match_parent"
-            android:layout_height="420dp"
+            android:layout_height="400dp"
             android:layout_margin="14dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="20dp"
@@ -85,27 +85,15 @@
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
-                <LinearLayout
+                <Button
+                    android:id="@+id/shuffleButton"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
-                    android:gravity="center">
-
-                    <Button
-                        android:id="@+id/shuffleButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="18dp"
-                        android:backgroundTint="#378C99"
-                        android:text="Shuffle" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="#378C99"
-                        android:text="Save" />
-
-                </LinearLayout>
+                    android:layout_height="70dp"
+                    android:layout_marginHorizontal="18dp"
+                    android:layout_marginTop="48dp"
+                    android:backgroundTint="#378C99"
+                    android:text="@string/shuffle"
+                    app:cornerRadius="40dp" />
 
             </LinearLayout>
 
@@ -114,7 +102,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Let’s hit the shuffle for interesting activities!"
+            android:text="@string/info"
             android:textColor="#FF425E63"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

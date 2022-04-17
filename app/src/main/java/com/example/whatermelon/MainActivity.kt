@@ -2,8 +2,6 @@ package com.example.whatermelon
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -39,13 +37,8 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.shuffleButton.setOnClickListener {
-            Log.d("testaja", "button clicked");
             dataViewModel.getRandomActivity()
         }
     }
 
-    fun randomActivity(view: View) {
-        Log.d("testaja", "button clicked");
-        dataViewModel.getRandomActivity()
-    }
 }
